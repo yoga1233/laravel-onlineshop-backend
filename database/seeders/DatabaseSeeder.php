@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,5 +24,11 @@ class DatabaseSeeder extends Seeder
             'roles' => 'admin',
             'password' => Hash::make('password'),
         ]);
+
+        //category
+        Category::factory(4)->create();
+
+        //product
+        \App\Models\Product::factory(20)->create();
     }
 }

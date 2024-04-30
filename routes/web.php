@@ -14,4 +14,8 @@ Route::middleware(['auth'])->group(function () {
     })->name('home');
 
     Route::resource('users', UserController::class);
+    //category
+    Route::resource('categories', \App\Http\Controllers\CategoryController::class);
+    //product
+    Route::resource('product', \App\Http\Controllers\ProductController::class);
 });
